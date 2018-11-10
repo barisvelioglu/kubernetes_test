@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: webappv2
+ labels:
+  appname: nodewebapp1
+  release: "2"
+spec:
+ containers:
+ - name: webapp
+   image: barisv/nodewebapp1:2
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+ name: webappv3
+ labels:
+  appname: nodewebapp1
+  release: "3"
+spec:
+ containers:
+ - name: webapp
+   image: barisv/nodewebapp1:3
