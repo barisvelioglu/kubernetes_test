@@ -1,12 +1,13 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
- name: webapp-rs
+ name: webapp
 spec:
+ #minReadySeconds: 10
  selector:
   matchLabels:
    appname: webapp61
- replicas: 5
+ replicas: 2kube
  template:
   metadata:
    labels:
